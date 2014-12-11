@@ -1,0 +1,30 @@
+<table>
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>DOB</th>
+		<th>Location</th>
+		<th>Comment</th>
+		<th>Image</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+		<% @questions.each do |t| %>
+		<tr>
+			<td><%= t.name %></td>
+			<td><%= t.email %></td>
+			<td><%= t.dob %></td>
+			<td><%= t.location %></td>
+			<td><div style="width: 250px" ><%= t.comment %></div></td>
+			<td><%= image_tag t.picture_url(:thumb) if t.picture? %></td>
+			<td><div style="width: 200px" ><%= link_to('Show', {:action => 'show', :id => t.id })%> 
+				<%= link_to('Edit', {:action => 'edit', :id => t.id })%>
+				<%= link_to('Delete', {:action => 'delete', :id => t.id})%>
+				<%= link_to('New', {:action => 'new'})%></div>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

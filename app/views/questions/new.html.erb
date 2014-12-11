@@ -1,0 +1,31 @@
+<%= form_for(:question, :url => {:action => "create"}) do |f| %>
+	<table>
+		<tr>
+			<th class="noblueborder"><%= f.label(:name) %></th>
+			<td><%= f.text_field(:name) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:email) %></th>
+			<td><%= f.text_field(:email) %></td>
+		</tr>
+  	<tr>
+  		<th class="noblueborder"><%= f.label(:dob) %></th>
+  		<td><%= f.text_field :dob, :placeholder => "Date of Birth"%></td>
+    </tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:location) %></th>
+			<td><%= f.select(:location, ['Balbriggan', 'Newtown McKennedy']) %>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:comment)%></th>
+			<td><%= f.text_area(:comment, :size => '50*10') %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label('Upload File')%></th>
+			<td><%= f.file_field(:picture) %></td>
+		</tr>
+
+	</table>
+	<%= submit_tag("Submit Question")%>
+<%end%>
+

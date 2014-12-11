@@ -1,0 +1,33 @@
+<% if !flash[:notice].blank? %>
+<p><%= flash[:notice]%></p>
+<%end%>
+<%= form_for(:question, :url => question_path(@question.id), :html => {:method => :put}) do |f| %>
+	<table>
+		<tr>
+			<th class="noblueborder"><%= f.label(:name) %></th>
+			<td><%= f.select(:location, Question.all.collect {|s| [s.name, s.id]})%>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:email) %></th>
+			<td><%= f.text_field(:email) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:dob)%></th>
+			<td><%= f.text_field(:dob) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:location) %></th>
+			<td><%= f.select(:location, ['Balbriggan', 'Newtown McKennedy']) %>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:comment)%></th>
+			<td><%= f.text_field(:comment) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label('Upload File')%></th>
+			<td><%= f.file_field(:picture) %></td>
+		</tr>
+
+	</table>
+	<%= submit_tag("Update Question")%>
+<%end%>

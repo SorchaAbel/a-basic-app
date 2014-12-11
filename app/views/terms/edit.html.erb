@@ -1,0 +1,25 @@
+<%= form_for(:term, :url => term_path(@term.id), :html => {:method => :put}) do |f| %>
+	<table>
+		<tr>
+      <th class="noblueborder"><%= f.label("Term") %></th>
+      <td><%= f.select :year_term, [1,2,3,4]%></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:year) %></th>
+			<td><%= f.select(:year, [2014,2015,2016]) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:student_id)%></th>
+			<td><%= f.collection_select :student_id, Student.all, :id, :name, prompt: true %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:amt_paid) %></th>
+			<td><%= f.text_field(:amt_paid) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:location) %></th>
+			<td><%= f.text_field(:location) %></td>
+		</tr>
+	</table>
+	<%= submit_tag("Update Enrolment")%>
+<% end %>

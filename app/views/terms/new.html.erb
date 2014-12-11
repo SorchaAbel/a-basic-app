@@ -1,0 +1,25 @@
+<%= form_for(@term) do |f| %>
+  <table>
+		<tr>
+			<th class="noblueborder"><%= f.label(:term) %></th>
+			<td><%= f.select :year_term, [1,2,3,4], prompt: true%></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:year) %></th>
+			<td><%= f.select(:year, 2013..Time.now.year+1, :selected=>(f.object.year || Time.now.year)) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:student_id)%></th>
+      <td><%= f.collection_select :student_id, Student.all, :id, :name, prompt: true %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:amt_paid) %></th>
+			<td><%= f.text_field(:amt_paid) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:location) %></th>
+			<td><%= f.text_field(:location) %></td>
+		</tr>
+	</table>
+	<%= submit_tag("Create Enrolment")%>
+<%end%>

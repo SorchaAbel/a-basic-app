@@ -1,0 +1,300 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require jquery.ui.all
+ *= require jquery.ui.datepicker
+//= require jquery.ui.menu
+ */
+
+* 									{ margin: 0; padding: 0; }
+body								{ font: 14px Helvetica, Sans-Serif; } 
+#page-wrap							{ width: 800px; margin: 25px auto; } 
+a									{ text-decoration: none; }
+ul									{ list-style: none; }
+p
+
+body, html {
+	margin: 0;
+	padding: 0;
+
+	font-family: Tahoma, Arial, Helvetica, Sans-serif;
+	background:white;
+	color: #000
+}
+span.currentPage{
+	color: #fff;
+	background-color: #ACACAC;
+}
+span.currentPage2{
+	color: #fff;
+	background-color: #808080;
+}
+body{	
+	/*min-width: 750px; */
+	font-family:sans-serif,Verdana, Helvetica, Arial;
+	line-height: 135%;
+
+}
+form{
+	margin-left: 10px;
+	padding-left: 10px;
+	text-align: left;
+}
+.backtotop{
+	font-size: x-small;
+	font-weight: bold;
+	padding-left: 2%;
+}
+#wholePage{
+	background: white;
+	margin:0px;
+/*	width: 750px; 
+	border-left-style: solid;
+	border-color: #c9c9c9;
+	border-right-style: solid; */
+}
+
+#header{
+	/*background: #004682;
+
+	background-color:#DB0F0F;
+	background-image: url(images/blueshort2.JPG);
+	background-image: url(/images/blueshort2.jpg); 
+	background-repeat: no-repeat; */
+	background-color: #004D79;
+	/* background-color:#256A8B;*/
+	color: white;
+	margin:0;
+
+}
+#header p{
+	padding-left: 5px;
+	padding-bottom:5px;
+    margin:0;
+}
+.heading{
+	padding-left: 20px;
+	padding:10px; 
+    margin:0px;
+	 font-weight:bold;
+	 font-size: larger;
+
+	color:white;
+}
+
+.tagline{
+	/*font-style: italic;
+	/*padding: 10px;*/
+	font-size: smaller;
+}
+#header h1 {
+    /*padding:0px 0px -5px 15px;*/
+    margin:0;
+}
+	 /* this will bring the heading right up to the top of the page */
+
+	#navigation{
+		float: right;
+		padding:0px;
+		margin:-21px 0px 0px 0px;
+	}
+/*
+	#navigation li{
+		display: inline;
+		margin:0;
+		padding: 0;
+	}
+	#navigation ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align:left;
+	}
+	#navigation ul li { 
+		display: inline; 
+
+
+	}
+	#navigation ul li a {
+		text-decoration: none;
+		/*padding: .2em 1em;*/
+/*		padding: .15em 1.75em;
+		color: #fff;
+		/*background-color: #036;*/
+/*		background-color: #808080;
+	}
+
+
+	#navigation ul li a:hover{
+		color: #fff;
+		background-color: #ACACAC;
+	}
+*/
+ul, ol  {
+	font-size: small;
+	color: navy;
+}
+a:link {
+	color: blue
+}
+
+a:visited {
+	color: #F04684;
+}
+a:hover {
+	color: #DB0F0F
+}
+a:active {
+	color: navy
+}
+	#main{
+		clear:both;
+		background: white;
+		float: left;
+		width: 70%;
+		padding-bottom: 15%;
+	}
+span.highlight{
+	font-weight: bold;
+}
+#main h2{
+	padding:0 10px;
+	font-size: larger;
+	color: #315DA6;
+}
+#main p {
+    padding:0 10px;
+	font-size: small;
+	color: navy;
+}
+#main h3{
+		padding:0 10px;
+	font-size: large;
+	color: #315DA6;
+}
+#rightSide{
+	margin: 10px;
+	padding: 10px;
+	background: white;
+	float: right;
+	width: 220px;
+
+}
+#rightSide h2{
+	padding: 0 10px;
+	font-size: larger;
+	color: #701328;/*#315DA6;*/
+}
+#rightSide h3, #rightSide p {
+   	font-size: small;
+		color:#701328; /*navy;*/
+		padding: 0 10px 0 10px;
+    }
+#footer{
+	/*background: white;*/
+	clear:both;
+	text-align: center;
+	font-family: Tahoma, Arial, Helvetica, Sans-serif;
+	font-size: 10px;
+	color: #778899;
+
+/*	border-top: solid #c9c9c9; 
+	border-bottom: solid #c9c9c9;
+	background-color: #efefff; */
+}
+
+#footer p {
+
+    padding:5px 0px;
+	margin:0;
+
+}
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; padding-right: 40px; }
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #004D79; color: white; }
+ul.dropdown a:hover		            { background: #4C0009; color: white; }
+ul.dropdown a:active                { background: #990033; color: white; }
+ul.dropdown li a                    { display: block; padding: 4px 8px; border-right: 1px solid white; color:white; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover				{ background: #004D79; color: white; }
+ul.dropdown li:hover                { background: #004D79; color: white; position: relative; }
+ul.dropdown li.hover a              { color: white; }
+
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; }
+ul.dropdown ul li 					{ font-weight: normal; background: #004D79; color: white; 
+									  border-bottom: 1px solid #ccc; float: none; }
+
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none; width: 100%; display: inline-block; } 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+table
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 0px 45px 45px 45px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+table
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 0px 45px 45px 45px;
+	width: 480px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 0px 8px 0px 8px;
+	border-bottom: 2px solid #6678b1;
+
+}
+th.noblueborder
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #039;
+	padding: 0px 8px 0px 8px;
+	border-bottom: 2px solid white;
+}
+td
+{
+	color: #669;
+	padding: 10px;
+}
+tbody tr:hover td
+{
+	color: #009;
+}
+.validation{
+ border: solid red;
+}

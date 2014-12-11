@@ -1,0 +1,26 @@
+<table id="horizontal">
+	<tr>
+		<th class="noblueborder"><%= f.label(:name) %></th>
+		<td><%= f.text_field :name,:placeholder => "Full Name", :class => @val_class %></td>
+	</tr>
+	<tr>
+		<th class="noblueborder"><%= f.label(:dob) %></th>
+		<td><%= f.text_field :dob, :placeholder => "Date of Birth"%></td>
+  </tr>
+	<tr>
+		<th class="noblueborder"><%= f.label(:Address)%></th>
+		<td><%= f.text_field :addr1, :placeholder => "Address Line 1", :class => @val_class %></td>
+	</tr>
+	<tr>
+		<th class="noblueborder"><%= f.label(:Address2) %></th>
+		<td><%= f.text_field :addr2, :placeholder => "Address Line 2", :class => @val_class %></td>
+	</tr>
+	<tr>
+		<th class="noblueborder"><%= f.label(:postcode) %></th>
+		<td><%= f.text_field :postcode, :placeholder => "Postcode", :class => @val_class %></td>
+	</tr>
+	<tr>
+		<th class="noblueborder"><%= f.label(:email) %></th>
+		<td><%= f.text_field :email, :placeholder => "Email address", :class => @val_class %></td>
+	</tr>
+</table>

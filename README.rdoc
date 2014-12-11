@@ -1,0 +1,20 @@
+## Steps are necessary to get the application up and running.
+
+* Ruby version - ruby 2.1.1p76
+
+* Database creation - rake db:create, rake db:migrate, rake db:seed
+
+* How to run the test suite - bundle exec rspec
+
+### Overview
+
+1. My first rails project for a (fake) small speech and drama school.
+2. The public pages are available to all.
+3. The admin section is available only to the teachers or office administrators of the school.
+4. No student can login to view their data.
+5. Basic crud for all students/results/terms and questions
+6. Prawn used to generate a results certificate
+7. This is a website in itself but will also be used as an API for an ember project that I'm currently working on
+
+The site is a work in progress
+

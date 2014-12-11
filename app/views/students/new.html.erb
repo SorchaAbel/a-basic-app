@@ -1,0 +1,11 @@
+<% if !flash[:notice].blank? %>
+<h3><%= flash[:notice] %></h3>
+<div class ="notice_ui">
+	<p>There was an error processing the student details</p>
+	<p>Please ensure data has been input into ALL the fields with a red border</p>
+</div>
+<% end%>
+<%= form_for(@student) do |f| %>
+	<%=render(:partial => 'form', :locals => {:f => f})%>
+	<%= submit_tag("Create Student")%>
+<%end%>

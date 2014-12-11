@@ -1,0 +1,5 @@
+<%= form_for(:result, :url =>{:action => 'destroy', :id => @result.id}) do |f| %>
+<p>Grade: <%= @result.grade %></p>
+<p>Student id: <%= @result.student_id %></p>
+	<%= submit_tag("Delete Record") %>
+<% end %>

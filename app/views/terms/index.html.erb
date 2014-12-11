@@ -1,0 +1,28 @@
+<table>
+	<thead>
+	<tr>
+		<th>Term</th>
+		<th>Year</th>
+		<th>Student</th>
+		<th>Amount Paid</th>
+		<th>Location</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+		<% @terms.each do |term| %>
+		<tr>
+			<td><%= term.year_term %></td>
+			<td><div style="width: 100px" ><%= term.year %></div></td>
+			<td><%= term.student.name %></td>
+			<td><%= term.amt_paid %></td>
+			<td><%= term.location %></td>
+			<td><div style="width: 200px" ><%= link_to('Show', term_path(term.id))%>
+				<%= link_to('Edit', edit_term_path(term.id))%>
+				<%= link_to('Delete', term_url(term.id), :method => :delete)%>
+				<%= link_to('New', new_term_path)%></div>
+			</td>
+		</tr>
+		<% end %>
+		</tbody>
+</table>

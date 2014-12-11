@@ -1,0 +1,5 @@
+<%= form_for(:term, :url => term_path(@term.id), :html => {:method => :delete}) do |f| %>
+<p>Term name: <%= @term.year_term %></p>
+<p>Term id: <%= @term.student_id %></p>
+	<%= submit_tag("Delete Record") %>
+<% end %>

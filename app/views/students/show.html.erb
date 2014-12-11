@@ -1,0 +1,25 @@
+<%= link_to("Back to List", students_url)%>
+<table>
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>DOB</th>
+		<th>Address 1</th>
+		<th>Address 2</th>
+		<th>Postcode</th>
+		<th>Email</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><%= @student.id%></td>
+		<td><div style="width: 100px" ><%= @student.name %></div></td>
+		<td><div style="width: 75px" ><%= @student.dob %></div></td>
+		<td><div style="width: 100px" ><%= @student.addr1 %></div></td>
+		<td><%= @student.addr2 %></td>
+		<td><%= @student.postcode %></td>
+		<td><%= @student.email %></td>
+	</tr>
+	</tbody>
+</table>

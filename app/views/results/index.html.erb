@@ -1,0 +1,29 @@
+<table>
+	<thead>
+	<tr>
+		<th>Grade</th>
+		<th>Student</th>
+		<th>Term</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+		<% @results.each do |result| %>
+		<tr>
+			<td><div style="width: 100px"><%= result.grade %></div></td>
+			<td><div style="width: 100px"><%= result.student.name %></div></td>
+			<td><div style="width: 150px>"><%= result.term_id %></div></td>
+			<td>
+        <div style="width: 300px" >
+          <%= link_to('New', new_result_path)%>
+          <%= link_to('Show', result_path(result.id))%>
+				  <%= link_to('Edit', edit_result_path(result.id))%>
+          <%= link_to('Delete', result_url(result.id), :method => :delete) %>
+				  <%= link_to "Certificate (PDF)", result_path(result, format: "pdf") %>
+        </div>
+			</td>
+		</tr>
+		<% end %>
+		</tbody>
+</table>
+

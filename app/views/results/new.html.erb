@@ -1,0 +1,17 @@
+<%= form_for(@result) do |f| %>
+	<table>
+		<tr>
+			<th class="noblueborder"><%= f.label(:grade) %></th>
+			<td><%= f.text_field(:grade) %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:student) %></th>
+		  <td><%= f.collection_select :student_id, Student.all, :id, :name, prompt: true %></td>
+		</tr>
+		<tr>
+			<th class="noblueborder"><%= f.label(:term)%></th>
+			<td><%= f.select :term_id, [1,2,3,4], prompt: true%></td>
+		</tr>
+	</table>
+	<%= submit_tag("Save Result")%>
+<%end%>

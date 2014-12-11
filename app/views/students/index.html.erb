@@ -1,0 +1,32 @@
+<table width="100%">
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>DOB</th>
+		<th>Address 1</th>
+		<th>Address 2</th>
+		<th>Postcode</th>
+		<th>Email</th>
+		<th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+		<% @students.each do |s| %>
+		<tr>
+			<td><%= s.id %></td>
+			<td><%= s.name %></td>
+			<td><div style="width: 100px" ><%= s.dob %></div></td>
+			<td><div style="width: 150px" ><%= s.addr1 %></div></td>
+			<td><div style="width: 100px" ><%= s.addr2 %></div></td>
+			<td><%= s.postcode %></td>
+			<td><%= s.email %></td>
+			<td><div style="width: 200px" ><%= link_to('Show', student_path(s.id))%>
+				<%= link_to('Edit', edit_student_path(s.id))%>
+				<%= link_to('Delete', student_url(s.id), :method => :delete )%>
+				<%= link_to('New', new_student_path)%></div>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
