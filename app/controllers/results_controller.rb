@@ -14,6 +14,7 @@ class ResultsController < ApplicationController
     @result = Result.find_by_id(params[:id])
     respond_to do |format|
       format.html
+      format.pdf
       format.json { render :json => @result }
     end
   end
