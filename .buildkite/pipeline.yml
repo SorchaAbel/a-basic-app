@@ -1,4 +1,4 @@
 steps:
   - label: ":construction_worker: Build"
-    command: echo "Build the boat"
+    command: echo "Build the boats"
     key: build
